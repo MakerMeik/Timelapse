@@ -105,8 +105,8 @@ void loop() {
     Serial.print(millis());
     Serial.println("WiFi lost. Restart ...");
     ESP.restart();
+  } else if ((WiFi.status() == WL_CONNECTED)) {
     previousMillis = currentMillis;
   }
-  
-  delay(10000);
+  delay(1000);
 }
